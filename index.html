@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FLUXO - Crypto for Everyone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- SEO метатеги -->
+  <meta name="description" content="FLUXO — cryptocurrency platform to learn, earn, and trade tokens via Telegram. Join our community today!">
+  <meta name="keywords" content="FLUXO token, crypto Brazil, learn and earn, cryptocurrency trading, Solana blockchain, Telegram bot, DeFi, blockchain education">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="FLUXO Team">
+
+  <!-- Open Graph для соцсетей -->
+  <meta property="og:title" content="FLUXO - Crypto for Everyone">
+  <meta property="og:description" content="Learn crypto, earn FLUXO tokens, and trade directly in Telegram. Join now!">
+  <meta property="og:image" content="https://fluxo.brz/og-image.jpg">
+  <meta property="og:url" content="https://fluxo.brz">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FLUXO - Crypto for Everyone">
+  <meta name="twitter:description" content="Learn, earn, and trade FLUXO tokens in Telegram. Join now!">
+  <meta name="twitter:image" content="https://fluxo.brz/twitter-image.jpg">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://fluxo.brz">
+
+  <!-- Структурированные данные JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "FLUXO",
+      "url": "https://fluxo.brz",
+      "description": "FLUXO is a cryptocurrency platform on Solana for learning, earning, and trading tokens.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://fluxo.brz/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      margin: 0;
+      background: #F5F5F5;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(90deg, #A4E4A4, #F7F79E);
+      text-align: center;
+      padding: 4rem 1rem;
+      border-bottom: 3px solid #800080;
+      animation: fadeIn 1s ease-in;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      color: #800080;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.3rem;
+      color: #333;
+    }
+    .cta-buttons a {
+      background: #FFD700;
+      color: #333;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 8px;
+      margin: 0.5rem;
+      display: inline-block;
+      transition: background 0.3s, transform 0.3s;
+      font-weight: bold;
+    }
+    .cta-buttons a:hover {
+      background: #E6C200;
+      transform: scale(1.05);
+    }
+    section {
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: auto;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .block-green { background: #D4F4D4; } /* Светло-зелёный */
+    .block-yellow { background: #FFF9CC; } /* Светло-жёлтый */
+    .block-purple { background: #E6D9F2; } /* Светло-фиолетовый */
+    section h2 {
+      color: #800080;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    section i {
+      color: #800080;
+      margin-right: 10px;
+    }
+    .telegram-floating {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #800080;
+      color: #FFD700;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .telegram-floating:hover {
+      transform: scale(1.1);
+    }
+    footer {
+      background: #E0F7FA;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+    .language-switcher {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="language-switcher">
+    <select id="language" onchange="changeLanguage(this.value)">
+      <option value="pt">Português</option>
+      <option value="es">Español</option>
+      <option value="en">English</option>
+    </select>
+  </div>
+  <header>
+    <h1 id="title">Bem-vindo ao FLUXO</h1>
+    <p id="description">Aprenda cripto, ganhe tokens e negocie diretamente no Telegram.</p>
+    <div class="cta-buttons">
+      <a href="#about">Saiba mais</a>
+      <a href="https://t.me/fluxo_bot">Junte-se agora</a>
+    </div>
+  </header>
+
+  <section class="block-green" id="about">
+    <h2 id="about-title"><i class="fas fa-info-circle"></i> Sobre o FLUXO</h2>
+    <p id="about-text">FLUXO é uma plataforma de criptomoedas na Solana que combina educação, recompensas e negociação. Feita para todos, conectamos você ao mundo cripto de forma simples e acessível.</p>
+  </section>
+
+  <section class="block-yellow" id="tokenomics">
+    <h2 id="tokenomics-title"><i class="fas fa-coins"></i> O Token FLUXO</h2>
+    <p id="tokenomics-text">Total: 1 bilhão de tokens FLUXO. Veja como funciona:</p>
+    <ul>
+      <li>35% — Aprendizado e recompensas comunitárias</li>
+      <li>20% — Equipe e desenvolvimento</li>
+      <li>15% — Reserva para estabilidade</li>
+      <li>15% — Marketing e parcerias</li>
+      <li>10% — Investidores iniciais</li>
+      <li>5% — Governança comunitária (DAO)</li>
+    </ul>
+  </section>
+
+  <section class="block-purple" id="join">
+    <h2 id="join-title"><i class="fas fa-users"></i> Participe Agora</h2>
+    <p id="join-text">Ganhe FLUXO aprendendo, fazendo staking ou negociando no Telegram. Comece hoje!</p>
+    <a href="https://t.me/fluxo_bot" class="telegram-floating">Comece agora 🚀</a>
+  </section>
+
+  <footer>
+    <p id="footer-text">FLUXO é um projeto comunitário experimental. Não é aconselhamento financeiro.</p>
+  </footer>
+
+  <script>
+    const translations = {
+      pt: {
+        title: "Bem-vindo ao FLUXO",
+        description: "Aprenda cripto, ganhe tokens e negocie diretamente no Telegram.",
+        aboutTitle: "Sobre o FLUXO",
+        aboutText: "FLUXO é uma plataforma de criptomoedas na Solana que combina educação, recompensas e negociação. Feita para todos, conectamos você ao mundo cripto de forma simples e acessível.",
+        tokenomicsTitle: "O Token FLUXO",
+        tokenomicsText: "Total: 1 bilhão de tokens FLUXO. Veja como funciona:",
+        joinTitle: "Participe Agora",
+        joinText: "Ganhe FLUXO aprendendo, fazendo staking ou negociando no Telegram. Comece hoje!",
+        footerText: "FLUXO é um projeto comunitário experimental. Não é aconselhamento financeiro."
+      },
+      es: {
+        title: "Bienvenido a FLUXO",
+        description: "Aprende cripto, gana tokens y negocia directamente en Telegram.",
+        aboutTitle: "Sobre FLUXO",
+        aboutText: "FLUXO es una plataforma de criptomonedas en Solana que combina educación, recompensas y comercio. Hecha para todos, te conectamos al mundo cripto de forma simple y accesible.",
+        tokenomicsTitle: "El Token FLUXO",
+        tokenomicsText: "Total: 1 mil millones de tokens FLUXO. Mira cómo funciona:",
+        joinTitle: "Únete Ahora",
+        joinText: "Gana FLUXO aprendiendo, haciendo staking o negociando en Telegram. ¡Empieza hoy!",
+        footerText: "FLUXO es un proyecto comunitario experimental. No es asesoramiento financiero."
+      },
+      en: {
+        title: "Welcome to FLUXO",
+        description: "Learn crypto, earn tokens, and trade directly in Telegram.",
+        aboutTitle: "About FLUXO",
+        aboutText: "FLUXO is a cryptocurrency platform on Solana that combines education, rewards, and trading. Built for everyone, we connect you to the crypto world simply and accessibly.",
+        tokenomicsTitle: "The FLUXO Token",
+        tokenomicsText: "Total: 1 billion FLUXO tokens. Here’s how it works:",
+        joinTitle: "Join Now",
+        joinText: "Earn FLUXO by learning, staking, or trading on Telegram. Start today!",
+        footerText: "FLUXO is a community-driven experimental project. Not financial advice."
+      }
+    };
+
+    function changeLanguage(lang) {
+      document.getElementById('title').textContent = translations[lang].title;
+      document.getElementById('description').textContent = translations[lang].description;
+      document.getElementById('about-title').textContent = translations[lang].aboutTitle;
+      document.getElementById('about-text').textContent = translations[lang].aboutText;
+      document.getElementById('tokenomics-title').textContent = translations[lang].tokenomicsTitle;
+      document.getElementById('tokenomics-text').textContent = translations[lang].tokenomicsText;
+      document.getElementById('join-title').textContent = translations[lang].joinTitle;
+      document.getElementById('join-text').textContent = translations[lang].joinText;
+      document.getElementById('footer-text').textContent = translations[lang].footerText;
+    }
+
+    // Устанавливаем португальский по умолчанию
+    changeLanguage('pt');
+  </script>
+</body>
+</html>
